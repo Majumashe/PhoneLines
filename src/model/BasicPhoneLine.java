@@ -7,7 +7,7 @@ public class BasicPhoneLine implements LocalCaller{
     private int numberOfCalls;
     private int numberOfLocalCalls;
 
-    public BasicPhoneLine(int numberOfCalls, int numberOfLocalCalls) {
+    public BasicPhoneLine(int numberOfLocalCalls, int numberOfCalls) {
         this.numberOfCalls = numberOfCalls;
         this.numberOfLocalCalls = numberOfLocalCalls;
     }

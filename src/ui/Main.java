@@ -31,12 +31,33 @@ public class Main {
 
         switch(opc){
             case 1:
-            //int numberOfCalls, int minOfLocalCalls
-                //numCalls = 
-                
-                //stauts = controller.addBasicPhoneLine();
+                System.out.println("Numero de llamadas: ");
+                numCalls = sc.nextInt();
+                System.out.println("Minutos locales: ");
+                minLocal = sc.nextInt();
+                sc.nextLine();
                 break;
             case 2:
+                System.out.println("Numero de llamadas: ");
+                numCalls = sc.nextInt();
+                System.out.println("Minutos locales: ");
+                minLocal = sc.nextInt();
+                System.out.println("Minutos celulares: ");
+                minCel = sc.nextInt();
+                sc.nextLine();
+                break;
+            case 3:
+
+                System.out.println("Numero de llamadas: ");
+                numCalls = sc.nextInt();
+                System.out.println("Minutos locales: ");
+                minLocal = sc.nextInt();
+                System.out.println("Minutos celulares: ");
+                minCel = sc.nextInt();
+                System.out.println("Minutos larga distancia: ");
+                minLarge = sc.nextInt();
+                sc.nextLine();
+                break;
             
         }
 

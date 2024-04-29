@@ -5,9 +5,9 @@ package model;
 		private int minOfCellularCalls;
 
 		//constructor
-		public MobileLine(int minsCelular, int minsLocal){
-			super(minsLocal); //Llama el constructor de la clase padre
-			minOfCellularCalls = minsCelular;
+		public MobileLine(int numCalls, int minsCelular, int minsLocal){
+			super(numCalls, minsLocal); //Llama el constructor de la clase padre
+			this.minOfCellularCalls = minsCelular;
 
 		}
 		//metodos de la interfaz

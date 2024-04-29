@@ -22,7 +22,8 @@ public class VoiceIPLine extends MobileLine implements LongDistanceCaller{
     }
 
     public int calculatePrice(){
-        return minOfLongDistance*VOICEIP_LONGDISTANCE_CALL;
+        int precioInter = super.calculatePrice();
+        return precioInter + minOfLongDistance*VOICEIP_LONGDISTANCE_CALL;
     }
 
     //sobreescribimos el toString

@@ -21,14 +21,18 @@ package model;
 
 		//metodos de la interfaz
 		public void celularCall(int mntsCall){
-			minOfCellularCalls += mntsCall;
+			//asdas
+			int i = 0;
 
 
 		}
  
-    	public int calculatePrice(int timeCall){
+    	public int calculatePrice(){
+
+			int precioLocal = super.priceLocalCalls();
+		
 			
-			return MOBILE_PRICE_CALL*minOfCellularCalls;
+			return precioLocal + MOBILE_PRICE_CALL*minOfCellularCalls;
 		}
  
 	}

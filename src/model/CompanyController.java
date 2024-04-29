@@ -3,8 +3,6 @@ package model;
 public class CompanyController{
 	
 	private BasicPhoneLine[] basicLines;
-	private MobileLine[] mobileLines;
-	private VoiceIPLine[] vozIPLines;
 	
 	public CompanyController(){
 		this.basicLines = new BasicPhoneLine[1000];
@@ -33,9 +31,9 @@ public class CompanyController{
 	public String addMobileLine(int numberOfCalls, int minOfLocalCalls, int minOfCelular){
 		String msg = "";
 
-		for(int i = 0; i<mobileLines.length; i++){
-			if(mobileLines[i] == null){
-				mobileLines[i] = new MobileLine(numberOfCalls, minOfLocalCalls, minOfCelular);
+		for(int i = 0; i<basicLines.length; i++){
+			if(basicLines[i] == null){
+				basicLines[i] = new MobileLine(numberOfCalls, minOfLocalCalls, minOfCelular);
 				msg = "New phone line";
 			}
 		}
@@ -46,13 +44,33 @@ public class CompanyController{
 	public String addVozIPLine(int numberOfCalls, int minOfLocalCalls, int minOfCelular, int minLargeDistance){
 		String msg = "";
 
-		for(int i = 0; i<vozIPLines.length; i++){
-			if(vozIPLines[i] == null){
-				vozIPLines[i] = new VoiceIPLine(numberOfCalls, minOfLocalCalls, minOfCelular, minLargeDistance);
+		for(int i = 0; i<basicLines.length; i++){
+			if(basicLines[i] == null){
+				basicLines[i] = new VoiceIPLine(numberOfCalls, minOfLocalCalls, minOfCelular, minLargeDistance);
 				msg = "New phone line";
 			}
 		}
 		
 		return msg;
+	}
+
+
+
+	public String showLines(){
+
+		String msg = " ";
+
+		for(int i = 0; i<basicLines.length; i++){
+			if(basicLines[i] !=null){
+				msg = basicLines[i].toString() + "\n";
+
+			}
+
+		}
+	
+
+		return msg;
+
+
 	}
 }

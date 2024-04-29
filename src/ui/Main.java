@@ -63,6 +63,12 @@ public class Main {
 
     }
 
+    public void showAllLines(){
+
+        String line = controller.showLines();
+        System.out.println(line);
+    }
+
     public void calculateBasicLine(){
 
 

@@ -4,8 +4,8 @@ public class BasicPhoneLine implements LocalCaller{
 
     
     public static final int PRICE_LOCAL_CALL=35;
-    private int numberOfCalls;
-    private int numberOfLocalCalls;
+    protected int numberOfCalls;
+    protected int numberOfLocalCalls;
 
     public BasicPhoneLine(int numberOfLocalCalls, int numberOfCalls) {
         this.numberOfCalls = numberOfCalls;
@@ -39,14 +39,12 @@ public class BasicPhoneLine implements LocalCaller{
 
     //Metodos de la interfaz
     public void localCall(int min){
-
-
+        int i= 0;
     }
+    
 	
 	public int priceLocalCalls(){
-
-
-        return 0;
+        return PRICE_LOCAL_CALL*numberOfLocalCalls;
     }
 
 }
